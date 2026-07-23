@@ -23,13 +23,16 @@
   }
   nav .brand { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; color: #3E706D; }
   nav .brand img { width: 26px; height: 26px; border-radius: 7px; }
-  nav a.nav-link { font-size: 13px; color: #3E706D; text-decoration: none; font-weight: 600; }
+  nav a.nav-link {
+    font-size: 13px; color: #fff; text-decoration: none; font-weight: 700;
+    background: #5BA4A0; padding: 9px 16px; border-radius: 999px;
+  }
 
   header.hero {
     background: #3D6E68;
     color: #fff;
     text-align: center;
-    padding: 56px 20px 64px;
+    padding: 56px 20px 48px;
   }
   .app-icon-hero { width: 84px; height: 84px; border-radius: 20px; margin: 0 auto 20px; display: block; box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
   .badge {
@@ -38,7 +41,15 @@
     letter-spacing: 0.5px;
   }
   h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.5; margin-bottom: 14px; }
-  header.hero p.lead { font-size: 15px; opacity: 0.92; max-width: 460px; margin: 0 auto; }
+  header.hero p.lead { font-size: 15px; opacity: 0.92; max-width: 460px; margin: 0 auto 28px; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #5BA4A0; color: #fff; text-decoration: none;
+    padding: 13px 28px; border-radius: 999px; font-weight: 700; font-size: 14.5px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  }
+  .btn-ghost { background: rgba(255,255,255,0.14); border: 1.5px solid rgba(255,255,255,0.5); box-shadow: none; }
 
   main { max-width: 960px; margin: 0 auto; padding: 0 20px; }
 
@@ -56,7 +67,7 @@
     scroll-snap-align: start; flex-shrink: 0;
   }
 
-  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .feature-card {
     background: #fff; border-radius: 16px; padding: 24px 20px; text-align: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.06);
@@ -68,8 +79,17 @@
   .roadmap-note {
     background: #fff; border-radius: 16px; padding: 20px 24px; text-align: center;
     font-size: 13px; color: #6E6E73; box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    margin-top: 16px;
   }
   .roadmap-note strong { color: #3E706D; }
+
+  .story {
+    background: #fff; border-radius: 20px; padding: 40px 32px;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+    display: flex; align-items: flex-start; gap: 20px;
+  }
+  .story img { width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0; }
+  .story p { font-size: 14.5px; color: #3A3A3A; line-height: 1.9; }
 
   .cta {
     background: #fff; border-radius: 20px; padding: 40px 24px; text-align: center;
@@ -77,11 +97,7 @@
   }
   .cta h2 { margin-bottom: 10px; }
   .cta p { color: #6E6E73; font-size: 14px; margin-bottom: 20px; }
-  .btn {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: #5BA4A0; color: #fff; text-decoration: none;
-    padding: 12px 26px; border-radius: 999px; font-weight: 700; font-size: 14px;
-  }
+  .cta .btn { background: #5BA4A0; box-shadow: none; }
 
   footer { text-align: center; font-size: 12px; color: #8E8E93; padding: 24px 20px 48px; }
   footer .footer-links { margin-top: 6px; }
@@ -91,6 +107,7 @@
     h1 { font-size: 26px; }
     .features { grid-template-columns: 1fr; }
     .shots img { height: 300px; }
+    .story { flex-direction: column; }
   }
 </style>
 </head>
@@ -98,21 +115,22 @@
 
 <nav>
   <div class="brand"><img src="icon.png" alt="Morewags"> Morewags</div>
-  <a class="nav-link" href="https://takumi13kmc.github.io/morewags-legal/support.html">お問い合わせ</a>
+  <a class="nav-link" href="mailto:liverpool13hana@gmail.com?subject=Morewags%20公開のお知らせを希望します&body=このまま送信していただければ、公開時にお知らせします。">お知らせを受け取る</a>
 </nav>
 
 <header class="hero">
   <img class="app-icon-hero" src="icon.png" alt="Morewags">
   <div class="badge">近日 App Store にて公開予定</div>
   <h1>愛犬との毎日を、<br>もっとしっぽが揺れる日々に。</h1>
-  <p class="lead">散歩のGPS記録・体重管理・通院記録・ワクチンリマインダーを、ひとつのアプリにまとめました。</p>
+  <p class="lead">毎日のお世話を、もっと簡単に。散歩も体重も通院記録も、大切な記録をいつでも見返せるように。</p>
+  <a class="btn" href="mailto:liverpool13hana@gmail.com?subject=Morewags%20公開のお知らせを希望します&body=このまま送信していただければ、公開時にお知らせします。">📩 公開のお知らせを受け取る</a>
 </header>
 
 <main>
 
   <section id="shots">
     <h2>アプリの中身</h2>
-    <p class="section-lead">記録はシンプルに、続けやすく。</p>
+    <p class="section-lead">愛犬の記録を、無理なく毎日の習慣に。</p>
     <div class="shots">
       <img src="shots/01-walk.png" alt="おさんぽGPS地図">
       <img src="shots/02-reminders.png" alt="ワクチン・お薬リマインダー">
@@ -132,29 +150,43 @@
         <p>スタートを押すだけで距離・時間・ルートを記録。うんち・おしっこもワンタップで残せます。</p>
       </div>
       <div class="feature-card">
-        <div class="emoji">💊</div>
-        <h3>ワクチン・お薬のリマインダー</h3>
-        <p>「次いつだっけ？」をなくす、周期リマインダー機能。</p>
+        <div class="emoji">⚖️</div>
+        <h3>体重の変化をグラフで確認</h3>
+        <p>日々の体重を記録し、前回からの変化や推移をひと目で確認できます。</p>
       </div>
       <div class="feature-card">
         <div class="emoji">📋</div>
         <h3>通院・医療費もひと目で</h3>
         <p>診断名や処方薬、費用を記録。月ごとの医療費もグラフで確認できます。</p>
       </div>
+      <div class="feature-card">
+        <div class="emoji">💊</div>
+        <h3>ワクチン・お薬のリマインダー</h3>
+        <p>「次いつだっけ？」をなくす、周期リマインダー機能。</p>
+      </div>
+    </div>
+    <div class="roadmap-note">
+      <strong>複数の愛犬の登録</strong>や<strong>家族共有</strong>機能も、近日提供予定です。
     </div>
   </section>
 
-  <section id="roadmap">
-    <div class="roadmap-note">
-      <strong>複数の愛犬の登録</strong>や<strong>家族共有</strong>機能も、近日追加予定です。
+  <section id="story">
+    <h2>Morewagsを作った理由</h2>
+    <div class="story">
+      <img src="icon.png" alt="">
+      <p>
+        Morewagsは、犬と暮らす中で「もっと記録を簡単に、もっと大切に残したい」という思いから生まれました。<br>
+        散歩の距離も、ワクチンの予定も、通院の記録も——気づけば忘れてしまいがちな愛犬とのお世話を、迷わず続けられるように。<br>
+        ひとつひとつの機能は、実際に犬と暮らす中で「こんな機能が欲しい」と感じたことから作っています。ご意見・ご要望をいただきながら、これからも少しずつ育てていきます。
+      </p>
     </div>
   </section>
 
   <section id="cta">
     <div class="cta">
       <h2>公開をお楽しみに</h2>
-      <p>ただいまApp Storeの審査準備中です。公開まで、もう少しお待ちください。</p>
-      <a class="btn" href="mailto:liverpool13hana@gmail.com">✉ お問い合わせ</a>
+      <p>ただいまApp Storeの審査準備中です。公開時にお知らせしますので、よければ登録しておいてください。</p>
+      <a class="btn" href="mailto:liverpool13hana@gmail.com?subject=Morewags%20公開のお知らせを希望します&body=このまま送信していただければ、公開時にお知らせします。">📩 公開のお知らせを受け取る</a>
     </div>
   </section>
 
